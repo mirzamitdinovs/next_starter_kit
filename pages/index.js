@@ -4,8 +4,10 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { useAppContext } from 'contexts/AppContext';
 
 export default function Home() {
+	const { state } = useAppContext();
 	const { t } = useTranslation();
 	return (
 		<div className={styles.container}>
